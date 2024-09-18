@@ -1,24 +1,26 @@
-import { City } from './city.type.js';
 import { Location } from './location.type.js';
-import { User } from './user.type.js';
+
+export type City = 'Paris' | 'Cologne' | 'Brussels' | 'Amsterdam' | 'Hamburg' | 'Dusseldorf';
+export type OfferType = 'apartment' | 'house' | 'room' | 'hotel';
+export type Goods = 'Breakfast' | 'Air conditioning' | 'Laptop friendly workspace' | 'Baby seat' | 'Washer' | 'Towels' | 'Fridge';
 
 export type Offer = {
-  id: string;
+  id: string,
   title: string;
   description: string;
-  createDate: string;
+  createdDate: Date;
   city: City;
   previewImage: string;
   images: string[];
   isPremium: boolean;
   isFavorite: boolean;
   rating: number;
-  type: string;
+  type: OfferType;
   bedrooms: number;
   maxAdults: number;
   price: number;
-  goods: string[];
-  host: User;
+  goods: Goods[];
+  hostId: string;
   comments: number;
   location: Location;
 }
