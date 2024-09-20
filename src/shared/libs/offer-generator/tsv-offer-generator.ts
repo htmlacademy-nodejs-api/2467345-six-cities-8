@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 
 import { OfferGenerator } from './offer-generator.interface.js';
-import { MockServerData } from '../../types/index.js';
+import { Location, MockServerData } from '../../types/index.js';
 import { generateRandomValue, getRandomItem, getRandomItems } from '../../helpers/index.js';
 
 const MIN_ID = 1;
@@ -29,6 +29,8 @@ export class TSVOfferGenerator implements OfferGenerator {
   constructor(private readonly mockData: MockServerData) {}
 
   public generate(): string {
+    const randomLocation = getRandomItem<Location>(this.mockData.locations) as Location;
+
     const id = generateRandomValue(MIN_ID, MAX_ID).toString();
     const title = getRandomItem<string>(this.mockData.titles);
     const description = getRandomItems<string>(this.mockData.descriptions).join(' ');
@@ -48,7 +50,8 @@ export class TSVOfferGenerator implements OfferGenerator {
     const goods = getRandomItems<string>(this.mockData.goods).join(';');
     const hostId = getRandomItem<string>(this.mockData.hostIds);
     const comments = generateRandomValue(MIN_COMMENTS, MAX_COMMENTS).toString();
-    const location = getRandomItem<string>(this.mockData.locations);
+    const lat = randomLocation.latitude;
+    const lon = randomLocation.longitude;
 
     return [
       id,
@@ -68,7 +71,8 @@ export class TSVOfferGenerator implements OfferGenerator {
       goods,
       hostId,
       comments,
-      location
+      lat,
+      lon
     ].join('\t');
   }
 }

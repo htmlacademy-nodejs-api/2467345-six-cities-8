@@ -18,36 +18,12 @@
       "2024-11-03"
     ],
     "cities": [
-      {
-        "name": "Dusseldorf",
-        "latitude": "51.225402",
-        "longitude": "6.776314"
-      },
-      {
-        "name": "Hamburg",
-        "latitude": "53.550341",
-        "longitude": "10.000654"
-      },
-      {
-        "name": "Cologne",
-        "latitude": "50.938361",
-        "longitude": "6.959974"
-      },
-      {
-        "name": "Amsterdam",
-        "latitude": "52.370216",
-        "longitude": "4.895168"
-      },
-      {
-        "name": "Paris",
-        "latitude": "48.85661",
-        "longitude": "2.351499"
-      },
-      {
-        "name": "Brussels",
-        "latitude": "50.846557",
-        "longitude": "4.351697"
-      }
+      "Dusseldorf",
+      "Hamburg",
+      "Cologne",
+      "Amsterdam",
+      "Paris",
+      "Brussels"
     ],
     "previewImages": [
       "https://example.com/preview.jpg",
@@ -96,19 +72,23 @@
     "locations": [
       {
         "latitude": "51.225402",
-        "longitude": "6.776314"
+        "longitude": "6.776314",
+        "zoom": "9"
       },
       {
         "latitude": "50.938361",
-        "longitude": "6.959974"
+        "longitude": "6.959974",
+        "zoom": "9"
       },
       {
         "latitude": "48.85987",
-        "longitude": "2.353465"
+        "longitude": "2.353465",
+        "zoom": "9"
       },
       {
         "latitude": "48.85661",
-        "longitude": "2.351499"
+        "longitude": "2.351499",
+        "zoom": "9"
       }
     ]
   }

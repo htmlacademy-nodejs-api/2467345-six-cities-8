@@ -1,3 +1,4 @@
+import { Location } from './index.js';
 export type MockServerData = {
   titles: string[];
   descriptions: string[];
@@ -10,5 +11,5 @@ export type MockServerData = {
   types: string[];
   goods: string[];
   hostIds: string[];
-  locations: string[];
+  locations: Location[];
 };
