@@ -83,11 +83,7 @@ export class TSVFileReader implements FileReader {
   }
 
   private parseBoolean(booleanString: string): boolean {
-    if(booleanString.toLowerCase() === 'true'){
-      return true;
-    } else{
-      return false;
-    }
+    return booleanString.toLowerCase() === 'true';
   }
 
   private parseInt(priceString: string): number {
