@@ -1,23 +1,23 @@
 {
   "api": {
-    "title": [
+    "titles": [
       "Комфортная квартира в центре",
       "Современная квартира с балконом",
       "Студия в историческом центре"
     ],
-    "description": [
+    "descriptions": [
       "Просторная и светлая квартира с современным ремонтом.",
       "Идеально подходит для отдыха.",
       "Уютный дом с большим двором и садом.",
       "Отличное место для семейного отдыха."
     ],
-    "createdDate": [
+    "createdDates": [
       "2024-09-01",
       "2024-09-20",
       "2024-10-20",
       "2024-11-03"
     ],
-    "city": [
+    "cities": [
       {
         "name": "Dusseldorf",
         "latitude": "51.225402",
@@ -49,7 +49,7 @@
         "longitude": "4.351697"
       }
     ],
-    "previewImage": [
+    "previewImages": [
       "https://example.com/preview.jpg",
       "https://example.com/preview2.jpg",
       "https://example.com/preview3.jpg"
@@ -73,7 +73,7 @@
       true,
       false
     ],
-    "type": [
+    "types": [
       "apartment",
       "house",
       "room",
