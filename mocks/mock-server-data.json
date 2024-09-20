@@ -1,0 +1,115 @@
+{
+  "api": {
+    "title": [
+      "Комфортная квартира в центре",
+      "Современная квартира с балконом",
+      "Студия в историческом центре"
+    ],
+    "description": [
+      "Просторная и светлая квартира с современным ремонтом.",
+      "Идеально подходит для отдыха.",
+      "Уютный дом с большим двором и садом.",
+      "Отличное место для семейного отдыха."
+    ],
+    "createdDate": [
+      "2024-09-01",
+      "2024-09-20",
+      "2024-10-20",
+      "2024-11-03"
+    ],
+    "city": [
+      {
+        "name": "Dusseldorf",
+        "latitude": "51.225402",
+        "longitude": "6.776314"
+      },
+      {
+        "name": "Hamburg",
+        "latitude": "53.550341",
+        "longitude": "10.000654"
+      },
+      {
+        "name": "Cologne",
+        "latitude": "50.938361",
+        "longitude": "6.959974"
+      },
+      {
+        "name": "Amsterdam",
+        "latitude": "52.370216",
+        "longitude": "4.895168"
+      },
+      {
+        "name": "Paris",
+        "latitude": "48.85661",
+        "longitude": "2.351499"
+      },
+      {
+        "name": "Brussels",
+        "latitude": "50.846557",
+        "longitude": "4.351697"
+      }
+    ],
+    "previewImage": [
+      "https://example.com/preview.jpg",
+      "https://example.com/preview2.jpg",
+      "https://example.com/preview3.jpg"
+    ],
+    "images": [
+      "https://example.com/photo1.jpg",
+      "https://example.com/photo2.jpg",
+      "https://example.com/photo3.jpg",
+      "https://example.com/photo4.jpg",
+      "https://example.com/photo5.jpg",
+      "https://example.com/photo6.jpg",
+      "https://example.com/photo7.jpg",
+      "https://example.com/photo8.jpg",
+      "https://example.com/photo9.jpg"
+    ],
+    "isPremium": [
+      true,
+      false
+    ],
+    "isFavorite": [
+      true,
+      false
+    ],
+    "type": [
+      "apartment",
+      "house",
+      "room",
+      "hotel"
+    ],
+    "goods": [
+        "Breakfast",
+        "Air conditioning",
+        "Washer",
+        "Fridge",
+        "Towels",
+        "Baby seat",
+        "Laptop friendly workspace"
+    ],
+    "hostIds": [
+      "https://example.com/user/1",
+      "https://example.com/user/2",
+      "https://example.com/user/3"
+    ],
+    "locations": [
+      {
+        "latitude": "51.225402",
+        "longitude": "6.776314"
+      },
+      {
+        "latitude": "50.938361",
+        "longitude": "6.959974"
+      },
+      {
+        "latitude": "48.85987",
+        "longitude": "2.353465"
+      },
+      {
+        "latitude": "48.85661",
+        "longitude": "2.351499"
+      }
+    ]
+  }
+}
