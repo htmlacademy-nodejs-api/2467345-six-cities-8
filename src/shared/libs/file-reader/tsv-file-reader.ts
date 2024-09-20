@@ -1,15 +1,18 @@
+import EventEmitter from 'node:events';
 
 import { FileReader } from './file-reader.interface.js';
 import { Offer, OfferType, City, Goods } from '../../types/index.js';
 
 const DEFAULT_ZOOM = 9;
 
-export class TSVFileReader implements FileReader {
+export class TSVFileReader extends EventEmitter implements FileReader {
   private rawData = '';
 
   constructor(
     private readonly filename: string
-  ) {}
+  ) {
+    super();
+  }
 
   private validateRawData(): void {
     if (! this.rawData) {
