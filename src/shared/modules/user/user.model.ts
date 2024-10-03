@@ -24,7 +24,7 @@ const userSchema = new Schema({
     minlength: [2, 'Min length for firstname is 2']
   },
   password: String,
-  type: UserType,
+  type: String,
 }, { timestamps: true });
 
 export const UserModel = model<UserDocument>('User', userSchema);
