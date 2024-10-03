@@ -2,7 +2,7 @@ import EventEmitter from 'node:events';
 import { createReadStream } from 'node:fs';
 
 import { FileReader } from './file-reader.interface.js';
-import { Offer, OfferType, City, Goods } from '../../types/index.js';
+import { Offer, OfferType, City, Goods, User } from '../../types/index.js';
 
 const DEFAULT_ZOOM = 9;
 
@@ -54,13 +54,25 @@ export class TSVFileReader extends EventEmitter implements FileReader {
       maxAdults: this.parseInt(maxAdults),
       price: this.parseInt(price),
       goods: this.parseGoods(goods),
-      hostId,
+      hostId: this.parseHostId(hostId),
       comments: this.parseInt(comments),
       location: {
         latitude: this.parseFloat(lat),
         longitude: this.parseFloat(lon),
         zoom: DEFAULT_ZOOM
       }
+    };
+  }
+
+  private parseHostId(hostId: string): User {
+    return {
+      id: hostId,
+      name: 'default_name',
+      email: 'default_email',
+      avatarUrl: '',
+      password: 'default',
+      type: 'default'
+
     };
   }
 
