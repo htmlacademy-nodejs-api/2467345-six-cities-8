@@ -5,7 +5,7 @@ export type OfferType = 'apartment' | 'house' | 'room' | 'hotel';
 export type Goods = 'Breakfast' | 'Air conditioning' | 'Laptop friendly workspace' | 'Baby seat' | 'Washer' | 'Towels' | 'Fridge';
 
 export type Offer = {
-  id: string,
+  id: string;
   title: string;
   description: string;
   createdDate: Date;
