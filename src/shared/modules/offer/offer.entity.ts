@@ -3,8 +3,10 @@ import {
   getModelForClass,
   modelOptions,
   prop,
+  Ref,
 } from '@typegoose/typegoose';
 import { City, Goods, Location, OfferType } from '../../types/index.js';
+import { UserEntity } from '../user/user.entity.js';
 // eslint-disable-next-line @typescript-eslint/no-unsafe-declaration-merging
 export interface OfferEntity extends defaultClasses.Base {}
 @modelOptions({
@@ -60,8 +62,8 @@ export class OfferEntity extends defaultClasses.TimeStamps {
   @prop({ type: () => String, enum: Goods, required: true })
   public goods: Goods[];
 
-  @prop({ required: true })
-  public hostId: string;
+  @prop({ ref: UserEntity, required: true })
+  public hostId: Ref<UserEntity>;
 
   @prop({ required: true })
   public comments: number;

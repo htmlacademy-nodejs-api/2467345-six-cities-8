@@ -1,4 +1,5 @@
 import { Location } from './location.type.js';
+import { User } from './user.type.js';
 
 export type City = 'Paris' | 'Cologne' | 'Brussels' | 'Amsterdam' | 'Hamburg' | 'Dusseldorf';
 export type OfferType = 'apartment' | 'house' | 'room' | 'hotel';
@@ -20,7 +21,7 @@ export type Offer = {
   maxAdults: number;
   price: number;
   goods: Goods[];
-  hostId: string;
+  hostId: User;
   comments: number;
   location: Location;
 }
