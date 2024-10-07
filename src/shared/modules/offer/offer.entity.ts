@@ -7,6 +7,7 @@ import {
 } from '@typegoose/typegoose';
 import { City, Goods, Location, OfferType } from '../../types/index.js';
 import { UserEntity } from '../user/user.entity.js';
+import { CityEnum, GoodsEnum, OfferTypeEnum } from '../../types/offer.type.js';
 // eslint-disable-next-line @typescript-eslint/no-unsafe-declaration-merging
 export interface OfferEntity extends defaultClasses.Base {}
 @modelOptions({
@@ -29,7 +30,7 @@ export class OfferEntity extends defaultClasses.TimeStamps {
   @prop({ required: false, default: Date.now() })
   public createdDate: Date;
 
-  @prop({ enum: City, required: true })
+  @prop({ enum: CityEnum, required: true })
   public city: City;
 
   @prop({ required: true })
@@ -47,7 +48,7 @@ export class OfferEntity extends defaultClasses.TimeStamps {
   @prop({ required: true })
   public rating: number;
 
-  @prop({ enum: OfferType, required: true })
+  @prop({ enum: OfferTypeEnum, required: true })
   public type: OfferType;
 
   @prop({ required: true })
@@ -59,7 +60,7 @@ export class OfferEntity extends defaultClasses.TimeStamps {
   @prop({ required: true })
   public price: number;
 
-  @prop({ type: () => String, enum: Goods, required: true })
+  @prop({ type: () => String, enum: GoodsEnum, required: true })
   public goods: Goods[];
 
   @prop({ ref: UserEntity, required: true })
