@@ -16,11 +16,6 @@ export class RestApplication {
   ) {}
 
   private async initDb() {
-    console.log(this.config.get('DB_USER'),
-      this.config.get('DB_PASSWORD'),
-      this.config.get('DB_HOST'),
-      this.config.get('DB_PORT'),
-      this.config.get('DB_NAME'),);
     const mongoUri = getMongoURI(
       this.config.get('DB_USER'),
       this.config.get('DB_PASSWORD'),
